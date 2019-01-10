@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MathPractice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="400" Background="HotPink">
+        Title="MATH PRACTICE" Height="650" Width="400" Background="HotPink" 
+        Icon="C:\Users\McPherson\source\repos\MathPractice\MathPractice\Images\icon.png">
     
     <StackPanel>
         <StackPanel Orientation="Horizontal">
@@ -31,34 +32,37 @@
         </StackPanel>
             <StackPanel Orientation="Horizontal"
                         Margin="10"
-                        Height="100">
+                        Height="200">
                 <StackPanel>
                     
                 <Button Margin="3"
                             HorizontalAlignment="Left"
+                            Height="80"
                             Width="90"
                             Name="NewProblemButton"
                             Content="NEW PROBLEM"
                             Click="NewProblemButton_Click"/>
                     <Button Margin="3"
                             HorizontalAlignment="Left"
+                            Height="80"
                             Width="90"
                             Name="SubmitAnswerButton"
                             Content="SUBMIT"
                             Click="SubmitAnswerButton_Click"/>
+                            
                 </StackPanel>
                 <StackPanel Name="txtPanel" Orientation="Horizontal" Height="55" Width="250" 
                             Margin="20,0,0,0" VerticalAlignment="Top">
                     <TextBlock Name="ProblemTextBlock" Height="50" Margin="5" FontSize="40"
-                               
                                Background="HotPink" 
                                Text="{Binding Equation.Expression,  
                                UpdateSourceTrigger=PropertyChanged}"/>
-                    <TextBox Name="InputTextBox" Height="50" Width="50" MaxWidth="200" Margin="5" 
+                    <TextBox Name="InputTextBox" Height="50" Width="200" MaxWidth="200" Margin="5" 
                              FontSize="40"
                              Background="SkyBlue" 
-                             
+                             PreviewKeyUp="InputTextBox_PreviewKeyUp"
                              Text="{Binding Equation.UserInput, Mode=OneWayToSource}"/>
+                             
                 </StackPanel>
        
             </StackPanel>
@@ -69,6 +73,7 @@
 
 
 </Window>
+                               
                 
 
        

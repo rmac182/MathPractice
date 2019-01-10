@@ -120,6 +120,7 @@
     <Resource Include="Images\Incorrect6.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\icon.png" />
     <Content Include="SoundFx\CorrectAudio.mp3" />
     <Content Include="SoundFx\IncorrectAudio.mp3" />
   </ItemGroup>

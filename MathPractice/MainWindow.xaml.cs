@@ -77,7 +77,7 @@ namespace MathPractice
                 _main.Result.DefaultImage();
 
             }
-
+            InputTextBox.Focus();
 
 
         }
@@ -92,12 +92,16 @@ namespace MathPractice
                    _main.Result.GetImagePath(_main.Result.result = "Correct");
                     mediaPlayer.Open(new Uri("C:\\Users\\McPherson\\source\\repos\\MathPractice\\MathPractice\\SoundFx\\CorrectAudio.mp3"));
                     mediaPlayer.Play();
+                    NewProblemButton.Focus();
                 }
                 else
                 {
                     _main.Result.GetImagePath(_main.Result.result = "Incorrect");
                     mediaPlayer.Open(new Uri("C:\\Users\\McPherson\\source\\repos\\MathPractice\\MathPractice\\SoundFx\\IncorrectAudio.mp3"));
                     mediaPlayer.Play();
+                    InputTextBox.Text = "";
+                    InputTextBox.Focus();
+                    
                 }
 
                 
@@ -110,12 +114,15 @@ namespace MathPractice
                     _main.Result.GetImagePath(_main.Result.result = "Correct");
                     mediaPlayer.Open(new Uri("C:\\Users\\McPherson\\source\\repos\\MathPractice\\MathPractice\\SoundFx\\CorrectAudio.mp3"));
                     mediaPlayer.Play();
+                    NewProblemButton.Focus();
                 }
                 else
                 {
                     _main.Result.GetImagePath(_main.Result.result = "Incorrect");
                     mediaPlayer.Open(new Uri("C:\\Users\\McPherson\\source\\repos\\MathPractice\\MathPractice\\SoundFx\\IncorrectAudio.mp3"));
                     mediaPlayer.Play();
+                    InputTextBox.Text = "";
+                    InputTextBox.Focus();
 
                 }
             }
@@ -126,12 +133,15 @@ namespace MathPractice
                     _main.Result.GetImagePath(_main.Result.result = "Correct");
                     mediaPlayer.Open(new Uri("C:\\Users\\McPherson\\source\\repos\\MathPractice\\MathPractice\\SoundFx\\CorrectAudio.mp3"));
                     mediaPlayer.Play();
+                    NewProblemButton.Focus();
                 }
                 else
                 {
                     _main.Result.GetImagePath(_main.Result.result = "Incorrect");
                     mediaPlayer.Open(new Uri("C:\\Users\\McPherson\\source\\repos\\MathPractice\\MathPractice\\SoundFx\\IncorrectAudio.mp3"));
                     mediaPlayer.Play();
+                    InputTextBox.Text = "";
+                    InputTextBox.Focus();
                 }
             }
             else if (Dividing)
@@ -145,16 +155,20 @@ namespace MathPractice
                     {
                         MessageBox.Show($"With a Remainder of {_main.Equation.GetRemainder()}\n GREAT JOB!!!!!");
                     }
+                    NewProblemButton.Focus();
                 }
                 else
                 {
                     _main.Result.GetImagePath(_main.Result.result = "Incorrect");
                     mediaPlayer.Open(new Uri("C:\\Users\\McPherson\\source\\repos\\MathPractice\\MathPractice\\SoundFx\\IncorrectAudio.mp3"));
                     mediaPlayer.Play();
-
+                    InputTextBox.Text = "";
+                    InputTextBox.Focus();
                 }
             }
         }
+                   
+
 
         private void Additon_Click(object sender, RoutedEventArgs e)
         {
@@ -186,6 +200,20 @@ namespace MathPractice
             Subtracting = false;
             Multiplying = false;
             Dividing = true;
+        }
+
+        private void InputTextBox_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            if (InputTextBox.Text != "")
+            {
+                switch (e.Key)
+                {
+                    case Key.Enter:
+                        SubmitAnswerButton.Focus();
+                        break;
+                }
+            }
+            
         }
     }
 }
