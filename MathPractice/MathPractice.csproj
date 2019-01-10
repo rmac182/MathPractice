@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\EquationViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ResultViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +72,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObservableObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +97,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Correct1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Incorrect1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Default.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Correct2.jpg" />
+    <Resource Include="Images\Correct3.jpg" />
+    <Resource Include="Images\Correct4.jpg" />
+    <Resource Include="Images\Correct5.jpg" />
+    <Resource Include="Images\Correct6.jpg" />
+    <Resource Include="Images\Incorrect2.jpg" />
+    <Resource Include="Images\Incorrect3.jpg" />
+    <Resource Include="Images\Incorrect4.jpg" />
+    <Resource Include="Images\Incorrect5.jpg" />
+    <Resource Include="Images\Incorrect6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SoundFx\CorrectAudio.mp3" />
+    <Content Include="SoundFx\IncorrectAudio.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

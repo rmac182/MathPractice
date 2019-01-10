@@ -5,8 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MathPractice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="500" Width="400" Background="HotPink">
+    
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Menu Background="HotPink">
+                <RadioButton Margin="2" 
+                                Name="Additon"
+                                Content="Add(+)"
+                                IsChecked="True"
+                                 Click="Additon_Click"/>
+                <RadioButton Margin="2" 
+                                Name="Subtraction"
+                                Content="Subtract(-)"
+                                 Click="Subtraction_Click"/>
+                <RadioButton Margin="2" 
+                                Name="Multiplication"
+                                Content="Multiply(X)"
+                                 Click="Multiplication_Click"/>
+                <RadioButton Margin="2" 
+                                Name="Division"
+                                Content="Divide(/)"
+                                 Click="Division_Click"/>
+            </Menu>
+        </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="10"
+                        Height="100">
+                <StackPanel>
+                    
+                <Button Margin="3"
+                            HorizontalAlignment="Left"
+                            Width="90"
+                            Name="NewProblemButton"
+                            Content="NEW PROBLEM"
+                            Click="NewProblemButton_Click"/>
+                    <Button Margin="3"
+                            HorizontalAlignment="Left"
+                            Width="90"
+                            Name="SubmitAnswerButton"
+                            Content="SUBMIT"
+                            Click="SubmitAnswerButton_Click"/>
+                </StackPanel>
+                <StackPanel Name="txtPanel" Orientation="Horizontal" Height="55" Width="250" 
+                            Margin="20,0,0,0" VerticalAlignment="Top">
+                    <TextBlock Name="ProblemTextBlock" Height="50" Margin="5" FontSize="40"
+                               
+                               Background="HotPink" 
+                               Text="{Binding Equation.Expression,  
+                               UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Name="InputTextBox" Height="50" Width="50" MaxWidth="200" Margin="5" 
+                             FontSize="40"
+                             Background="SkyBlue" 
+                             
+                             Text="{Binding Equation.UserInput, Mode=OneWayToSource}"/>
+                </StackPanel>
+       
+            </StackPanel>
+        <StackPanel>
+            <Image Height="300" Width="300" Source="{Binding Result.ImagePath, UpdateSourceTrigger=PropertyChanged}"  />
+        </StackPanel>
+    </StackPanel>
+
+
 </Window>
+                
+
+       
+        
+
+
+
+        
