@@ -176,6 +176,7 @@ namespace MathPractice
             Subtracting = false;
             Multiplying = false;
             Dividing = false;
+            this.NewProblemButton_Click(sender, e);
         }
 
         private void Subtraction_Click(object sender, RoutedEventArgs e)
@@ -184,6 +185,7 @@ namespace MathPractice
             Subtracting = true;
             Multiplying = false;
             Dividing = false;
+            this.NewProblemButton_Click(sender, e);
         }
 
         private void Multiplication_Click(object sender, RoutedEventArgs e)
@@ -192,6 +194,7 @@ namespace MathPractice
             Subtracting = false;
             Multiplying = true;
             Dividing = false;
+            this.NewProblemButton_Click(sender, e);
         }
 
         private void Division_Click(object sender, RoutedEventArgs e)
@@ -200,6 +203,7 @@ namespace MathPractice
             Subtracting = false;
             Multiplying = false;
             Dividing = true;
+            this.NewProblemButton_Click(sender, e);
         }
 
         private void InputTextBox_PreviewKeyUp(object sender, KeyEventArgs e)

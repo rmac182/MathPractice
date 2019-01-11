@@ -15,19 +15,19 @@
                                 Name="Additon"
                                 Content="Add(+)"
                                 IsChecked="True"
-                                 Click="Additon_Click"/>
+                                Click="Additon_Click"/>
                 <RadioButton Margin="2" 
                                 Name="Subtraction"
                                 Content="Subtract(-)"
-                                 Click="Subtraction_Click"/>
+                                Click="Subtraction_Click"/>
                 <RadioButton Margin="2" 
                                 Name="Multiplication"
                                 Content="Multiply(X)"
-                                 Click="Multiplication_Click"/>
+                                Click="Multiplication_Click"/>
                 <RadioButton Margin="2" 
                                 Name="Division"
                                 Content="Divide(/)"
-                                 Click="Division_Click"/>
+                                Click="Division_Click"/>
             </Menu>
         </StackPanel>
             <StackPanel Orientation="Horizontal"
